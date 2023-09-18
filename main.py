@@ -24,7 +24,6 @@ def format_excel(file):
     # with open('response.json', 'w', encoding='utf-8') as response_w:
     #     json.dump(companies, response_w, indent=4)
     red_fill = PatternFill(start_color='FFFF0000', end_color='FFFF0000', fill_type='solid')
-    # TODO: new xlsx file stays unformatted with the if statement, but formats ok without the if statement
     for i in range(2, ws.max_row + 1):
         if ws[f'J{i}'].value == 'ЛИКВИДИРОВАНА':
             ws[f'K{i}'].value = 'НЕАКТИВНО'
